@@ -17,7 +17,7 @@
 /// @return {Url}
 /// @require $base-url
 @function image($path, $base: $base-url) {
-  @return asset($base, 'images/', $path);
+  @return asset($base, 'img/', $path);
 }
 
 /// Returns URL to a font based on its path
@@ -27,4 +27,10 @@
 /// @require $base-url
 @function font($path, $base: $base-url) {
   @return asset($base, 'fonts/', $path);
+}
+
+
+// Calculate em values
+@function em($target, $context: $base__font-size) {
+	@return ($target / $context) * 1em;
 }

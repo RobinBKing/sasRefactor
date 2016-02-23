@@ -1,0 +1,53 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the sections of the site/application.
+// -----------------------------------------------------------------------------
+
+.page{
+  width: 93%;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+/*MAIN SECTIONS*/
+.section{
+  font-size: 0.81em;
+  padding: 2em 0;
+  hr{
+   margin-bottom: 2em;
+  }
+}
+
+.row{
+  margin: 0;
+  max-width: none;
+}
+
+/*intro*/
+.intro {
+  h2{
+    font-size: 1.3em;
+  }
+  p{
+    margin-bottom: 1em;
+  }
+}
+
+/*portfolio*/
+.portfolio {
+  ul li {
+    position: relative;
+  }
+  h2 {
+    @extend %text--uppercase;
+    background: $h2-bg;
+    color: #DEDEDE;
+    float: left;
+    position: absolute;
+    top: -1.5em;
+    margin-left: 1.5em;
+    right: 1.5em;
+    padding: 1em;
+    z-index: 50;
+    font-size: 0.8em;
+  }
+}

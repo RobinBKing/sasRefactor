@@ -14,13 +14,13 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvet
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
+$main-font: normal 100%/1.28571429 Georgia, serif;
 
-
-
+$h1-font: normal 3.3125em/0.75 Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
 
 /// Copy text color
 /// @type Color
-$text-color: rgb(34, 34, 34) !default;
+$text-color: #484640;
 
 /// Main brand color
 /// @type Color
@@ -38,35 +38,77 @@ $mid-grey: rgb(153, 153, 153) !default;
 /// @type Color
 $dark-grey: rgb(68, 68, 68) !default;
 
+/// Background
+///@type color
+$background-color : #EFEFEE;
 
+/// h1
+///@type color
+$h1-color : #969285;
 
+/// input color
+///@type color
+$input-color : #EEE;
 
+/// input background
+///@type color
+$input-bg : #9A9A9A;
+
+/// textarea background
+///@type color
+$textarea-bg : #e7e6e6;
+
+/// textarea border
+///@type color
+$textarea-border : 1px solid #E2E2E0;
 
 /// Container's maximum width
 /// @type Length
-$max-width: 1180px !default;
+$max-width: 700px !default;
 
+/// H2 bg color
+/// @type Length
+$h2-bg: rgba(0, 0, 0, 0.74);
 
-
-
+/// h2 color
+/// @type Length
+$h2-bg: #DEDEDE;
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 /// @see {mixin} respond-to
-$breakpoints: (
-  'small': (min-width: 320px),
-  'medium': (min-width: 768px),
-  'large': (min-width: 1024px),
-) !default;
-
-
-
-
-
+$breakpoint: (screen and (min-width: 1023px));
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/assets/' !default;
+$base-url: '../' !default;
+
+
+// Text
+
+$base__font-size : 16px;
+$big__font-size  : 26px;
+
+// Border radius
+
+$br--default     : .4em;
+$br--round       : 50%;
+
+// Transitions
+
+$trns-duration   : .3s;
+
+// Font Weights
+
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+$font-weight--bold       : 700;
+$font-weight--ultra-bold : 900;
+
+//Text shadows
+$input-text-shadow: (0, -1px, 0, rgba(0, 0, 0, 0.4));
+$textarea-text-shadow: (0, 1px, 1px, rgba(0, 0, 0, 0.2));

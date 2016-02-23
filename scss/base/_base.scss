@@ -8,6 +8,10 @@
 html {
   box-sizing: border-box;
 }
+*:not(body):not(html) {
+  box-sizing:border-box;
+  border:1px dashed #000;
+}
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
@@ -17,17 +21,84 @@ html {
  */
 *, *::before, *::after {
   box-sizing: inherit;
-} 
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
 
 /**
  * Basic styles for links
  */
 a {
+  @extend %text--uppercase ;
   color: $brand-color;
   text-decoration: none;
 
   @include on-event {
     color: $text-color;
-    text-decoration: underline;
   }
+}
+
+body{
+  background: $background-color;
+  color: $text-color;
+  font: $main-font;
+  font-size: $base__font-size;
+}
+
+ul {
+  overflow: auto;
+  list-style: none;
+  padding: 0;
+  li{
+    margin-bottom: 1.5em;
+  }
+}
+
+hr{
+  height: em(6px);
+  background: image('div.gif');
+  margin: 0;
+}
+
+h1{
+  @extend %text--uppercase;
+  @extend %text--italic;
+  color: $h1-color;
+  font: $h1-font;
+  letter-spacing: -0.05em;
+}
+
+i {
+  @extend %text--bold;
+  color: $text-color;
+}
+
+h3 {
+  color: $brand-color;
+}
+
+fieldset{
+  background: image('hatch.png');
+  font-size: 1.2em;
+  font-style: normal;
+  padding: 0.75em;
+  margin-bottom: 1em;
+}
+
+input {
+  &[type="submit"]{
+    @extend %text--uppercase;
+    @extend %text--bold;
+    background: $input-bg;
+    color: $input-color;
+    text-shadow: $input-text-shadow;
+    padding: 0.5em;
+  }
+}
+
+textarea{
+  background: $textarea-bg;
+  border: $textarea-border;
+  box-shadow: $textarea-text-shadow;
 }

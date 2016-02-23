@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the nav of the site/application.
+// -----------------------------------------------------------------------------
+
+.nav {
+  @extend %clearfix;
+  height: 100%;
+  overflow:auto;
+  ul li {
+    padding: 2em 0;
+  }
+  @media $breakpoint{
+  color: blue;
+}
