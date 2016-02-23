@@ -2,6 +2,11 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 
+.form {
+  @include respond-to(medium){
+    text-align: center;
+  }
+}
 
 .copyright{
   /*color: #E2E2E0;*/

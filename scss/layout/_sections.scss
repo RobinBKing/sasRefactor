@@ -6,6 +6,10 @@
   width: 93%;
   max-width: $max-width;
   margin: 0 auto;
+  @include respond-to(medium){
+    max-width: none;
+    width: 80%;
+  }
 }
 
 /*MAIN SECTIONS*/
@@ -26,11 +30,18 @@
 .intro {
   h2{
     font-size: 1.3em;
+    @include respond-to(medium){
+      font-size: 2em;
+    }
   }
   p{
     margin-bottom: 1em;
   }
+  @include respond-to(medium){
+    text-align: center;
+  }
 }
+
 
 /*portfolio*/
 .portfolio {
@@ -40,7 +51,7 @@
   h2 {
     @extend %text--uppercase;
     background: $h2-bg;
-    color: #DEDEDE;
+    color: $h2-color;
     float: left;
     position: absolute;
     top: -1.5em;
@@ -49,5 +60,10 @@
     padding: 1em;
     z-index: 50;
     font-size: 0.8em;
+  }
+  h1{
+    @include respond-to(medium){
+      text-align: right;
+    }
   }
 }

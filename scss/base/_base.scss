@@ -52,16 +52,25 @@ ul {
   padding: 0;
   li{
     margin-bottom: 1.5em;
+    @include respond-to(medium){
+      text-align: center;
+      font-size: 1.5em;
+    }
+  }
+}
+p {
+  @include respond-to(medium){
+    font-size: 1.5em;
   }
 }
 
-hr{
+hr {
   height: em(6px);
   background: image('div.gif');
   margin: 0;
 }
 
-h1{
+h1 {
   @extend %text--uppercase;
   @extend %text--italic;
   color: $h1-color;
